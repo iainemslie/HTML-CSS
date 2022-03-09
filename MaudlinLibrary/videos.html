@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style2.css">
+    <title>Maudlin Library | Videos</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Maudlin Library</h2>
+            <div class="toggle"></div>
+        </header>
+
+        <div class="videos">
+            <iframe width="420" height="315" id="video1"
+             src="https://www.youtube.com/embed/gH8tm99X74E" allowfullscreen>
+            </iframe> 
+
+            <iframe width="420" height="315" id="video2" 
+             src="https://www.youtube.com/embed/Smmk4c-v2BU" allowfullscreen>
+            </iframe> 
+
+            <iframe width="420" height="315" id="video3"
+             src="https://www.youtube.com/embed/eUwAVyLAapA" allowfullscreen>
+            </iframe> 
+
+            <iframe width="420" height="315" id="video4" 
+             src="https://www.youtube.com/embed/FtlUUBFGHzE" allowfullscreen>
+            </iframe> 
+        </div>
+        
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html#">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        });
+    </script>
+
+    <script>
+        var MediaQueryList = window.watchMedia('(max-width: 798px)');
+        mediaQueryList.addEventListener(screenTest);
+
+        function screenTest(e) {
+            if (e.matches) {
+                document.getElementById('video1').setAttribute("width", "210");
+                document.getElementById('video1').setAttribute("height", "157");
+            } else {
+                document.getElementById('video1').setAttribute("width", "420");
+                document.getElementById('video1').setAttribute("width", "315");
+            }
+        }
+
+    </script>
+</body>
+</html>
